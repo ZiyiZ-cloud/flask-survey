@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>{% block title %}{% endblock %}</title>
+  <link rel="stylesheet" href="/static/my-css.css">
+  <script src="http://unpkg.com/jquery"></script>
+</head>
+<body>
+    <nav class='navbar'>
+        <a href='/'>Home</a>
+    </nav>
+  {% block content %}{% endblock %}
+
+
+  <footer></footer>
+</body>
+</html>
