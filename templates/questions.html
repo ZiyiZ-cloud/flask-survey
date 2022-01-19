@@ -5,16 +5,15 @@
 {% block content %}
 
 <h1>Surveys Homepage</h1>
+
     <form action='/result' method='POST'>
         
-        {% for num in range(satisfaction.questions|length) %}
-            <p>{{ satisfaction.questions[num].question }}</p>
-            {% for choice in range(satisfaction.questions[num].choices|length) %}
-                <input type='radio' input name='result' value='{{ satisfaction.questions[num].choices[choice] }}'>
-                <label>{{ satisfaction.questions[num].choices[choice] }}</label>
+            <p>{{ satisfaction.questions[question_num].question }}</p>
+            {% for choice in range(satisfaction.questions[question_num].choices|length) %}
+                <input type='radio' input name='result' value='{{ satisfaction.questions[question_num].choices[choice] }}'>
+                <label>{{ satisfaction.questions[question_num].choices[choice] }}</label>
             {% endfor %}
-        {% endfor %}
-        <button>Submit</button>
+        <button>Continue</button>
     </form>
 
 
